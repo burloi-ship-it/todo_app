@@ -1,0 +1,73 @@
+# ✅ Post-A-Todo
+
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?logo=fastapi&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-ORM-red?logo=sqlalchemy&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?logo=bootstrap&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)
+
+A full-stack, secure, and responsive task management and blogging web application built with **FastAPI**, **SQLAlchemy**, **Jinja2**, and **Bootstrap 5**. Designed with RESTful principles, complete authentication workflows, email notifications, and Docker support.
+
+---
+
+## ✨ Key Features
+
+* **🔐 Secure Authentication & Authorization**:
+  * User registration and login powered by **JWT (JSON Web Tokens)** stored securely in HTTP-only cookies.
+  * Industry-standard password hashing using **Argon2**.
+  * Complete **Password Management**: Authenticated password updates (`/change-password`) and secure token-based email password recovery (`/forgot-password` & `/reset-password`) integrated via **Resend**.
+* **📋 Task & Note Management (RESTful API + SSR)**:
+  * Create, read, update (`PATCH`), and delete (`DELETE`) tasks seamlessly without page reloads via Fetch API.
+  * **Interactive Calendar Filtering**: Visual monthly calendar highlighting dates with scheduled tasks and allowing instant date-based filtering.
+  * Real-time progress bar tracking task completion rates.
+  * Dedicated detailed view for individual tasks/notes (`/task/{id}`).
+* **🎨 Modern, Responsive UI**:
+  * Unified **Bootstrap 5.3** interface with **Bootstrap Icons**.
+  * Built-in **Dark / Light Mode** toggle persisted in `localStorage`.
+* **🗄️ Database & Migrations**:
+  * Powered by **SQLAlchemy** ORM with **Alembic** configured for schema migrations.
+* **🐳 Containerized Deployment**:
+  * Ready for deployment with included `Dockerfile` and `docker-compose.yml`.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Backend**: Python 3.12, FastAPI, Uvicorn
+* **Database & ORM**: SQLite (default) / PostgreSQL ready, SQLAlchemy, Alembic
+* **Frontend**: Jinja2 Templates, Bootstrap 5.3, Vanilla JavaScript (ES6+ Fetch API)
+* **Security & Email**: Passlib (Argon2), Python-JOSE (JWT), Resend API
+* **DevOps**: Docker, Docker Compose
+
+---
+
+## 📂 Project Structure
+
+```text
+postatodo/
+├── alembic/                 # Database migration scripts and configuration
+├── routers/
+│   ├── auth.py              # Authentication, registration, and password reset routes
+│   └── tasks.py             # Task CRUD endpoints (HTML views + REST API)
+├── static/
+│   ├── css/style.css        # Custom styling and Dark Mode overrides
+│   └── images/logo.png      # Application branding assets
+├── templates/               # Jinja2 HTML templates extending layout.html
+│   ├── layout.html          # Base template with navbar, footer, and theme switcher
+│   ├── home.html            # Dashboard with interactive calendar and task list
+│   ├── task.html            # Detailed task/post view
+│   ├── login.html           # User login page
+│   ├── register.html        # User registration page
+│   ├── change_password.html # Authenticated password update form
+│   ├── forgot_password.html # Password recovery request form
+│   ├── reset_password.html  # Token-verified new password form
+│   └── error.html           # Custom error handling page
+├── database.py              # SQLAlchemy engine and session management
+├── email_service.py         # Resend email integration for password recovery
+├── main.py                  # FastAPI application entry point and middleware
+├── models.py                # SQLAlchemy database models (User, Task)
+├── schemas.py               # Pydantic validation schemas
+├── security.py              # Argon2 hashing and JWT token utilities
+├── Dockerfile               # Docker image build instructions
+├── docker-compose.yml       # Multi-container orchestration setup
+└── requirements.txt         # Python dependencies
