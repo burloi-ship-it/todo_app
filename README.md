@@ -72,53 +72,22 @@ postatodo/
 ├── docker-compose.yml       # Multi-container orchestration setup
 └── requirements.txt         # Python dependencies
 
-
 ## 📸 Application Preview
 
-<p align="center">
-  <strong>🖥️ Main Dashboard & Interactive Calendar</strong><br>
-  <img src="https://github.com/user-attachments/assets/4a9944f1-126f-4062-8ef3-361c0b874be5" alt="Dashboard" width="700">
-</p>
+### 🖥️ Main Dashboard & Interactive Calendar
+![Dashboard](https://github.com/user-attachments/assets/4a9944f1-126f-4062-8ef3-361c0b874be5)
 
-<br>
+### 🌙 Dark Mode Dashboard
+![Dark Mode](https://github.com/user-attachments/assets/1a4172c7-354d-45e0-9775-4386dd67b32c)
 
-<p align="center">
-  <strong>🌙 Dark Mode Dashboard</strong><br>
-  <img src="https://github.com/user-attachments/assets/1a4172c7-354d-45e0-9775-4386dd67b32c" alt="Dark Mode" width="700">
-</p>
+### 🔐 Secure Login Interface
+![Login](https://github.com/user-attachments/assets/50fef0a0-62e2-4485-b846-8c6761f51f14)
 
-<br>
+### 📧 Forgot Password Flow
+![Forgot Password](https://github.com/user-attachments/assets/3f479246-d071-4719-b453-9b45c2158afa)
 
-<p align="center">
-  <strong>🔐 Secure Login Interface</strong><br>
-  <img src="https://github.com/user-attachments/assets/50fef0a0-62e2-4485-b846-8c6761f51f14" alt="Login" width="700">
-</p>
+### 🔑 Reset / Edit Password View
+![Reset Password](https://github.com/user-attachments/assets/b3adb663-e7cb-466d-a10f-e7773825c8f8)
 
-<br>
-
-<p align="center">
-  <strong>📧 Forgot Password Flow</strong><br>
-  <img src="https://github.com/user-attachments/assets/3f479246-d071-4719-b453-9b45c2158afa" alt="Forgot Password" width="700">
-</p>
-
-<br>
-
-<p align="center">
-  <strong>🔑 Reset / Edit Password View</strong><br>
-  <img src="https://github.com/user-attachments/assets/b3adb663-e7cb-466d-a10f-e7773825c8f8" alt="Reset Password" width="700">
-</p>
-
-<br>
-
-<p align="center">
-  <strong>✏️ Edit Task / Note View</strong><br>
-  <img src="https://github.com/user-attachments/assets/5ece2715-868f-4935-a255-652664edecb7" alt="Edit Task" width="700">
-</p>
-
-
-
-
-
-
-
-
+### ✏️ Edit Task / Note View
+![Edit Task](https://github.com/user-attachments/assets/5ece2715-868f-4935-a255-652664edecb7)
