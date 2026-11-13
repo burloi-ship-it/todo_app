@@ -1,0 +1,112 @@
+/* ==========================================
+   1. Reguli Generale
+   ========================================== */
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================
+   2. Navbar Personalizat
+   ========================================== */
+.navbar {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 0.4rem !important;
+    padding-bottom: 0.4rem !important;
+    min-height: 50px;
+}
+
+.navbar-brand {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-right: 0 !important;
+}
+
+.navbar-logo {
+    height: 28px !important;
+    width: auto !important;
+    object-fit: contain;
+}
+
+.brand-text {
+    font-size: 1.15rem;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+}
+
+.fs-xs {
+    font-size: 0.65rem !important;
+    padding: 0.25em 0.55em !important;
+}
+
+/* ==========================================
+   3. Mod Întunecat (Dark Mode)
+   ========================================== */
+body.dark-mode,
+html.dark-mode {
+    background-color: #0f172a !important;
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .calendar-card,
+body.dark-mode .task-list,
+body.dark-mode .app-footer {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .calendar-day {
+    background-color: #334155;
+    color: #f1f5f9;
+}
+
+body.dark-mode .calendar-day:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+body.dark-mode .calendar-day-header {
+    color: #94a3b8;
+}
+
+body.dark-mode .form-control {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #f1f5f9;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #64748b;
+}
+
+body.dark-mode .text-dark,
+body.dark-mode .h4,
+body.dark-mode h2,
+body.dark-mode strong {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .text-muted,
+body.dark-mode .text-secondary {
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .task-row {
+    border-bottom-color: #334155 !important;
+}
+
+body.dark-mode .task-row.bg-light {
+    background-color: #1a2332 !important;
+}
+
+body.dark-mode .icon-btn {
+    color: #94a3b8;
+}
+
+body.dark-mode .icon-btn:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}

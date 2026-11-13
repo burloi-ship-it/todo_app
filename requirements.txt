@@ -1,0 +1,15 @@
+fastapi
+fastapi[standard]
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+alembic
+pydantic
+pydantic-settings
+email-validator
+passlib
+python-jose
+python-dotenv
+jinja2
+psycopg2-binary
+psycopg[binary]

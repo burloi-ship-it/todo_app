@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<style>
+    /* Card principal pentru detalii todo */
+    .task-card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e2e8f0;
+    }
+
+    /* Badge ID vizibil */
+    .task-id-badge {
+        background-color: #e2e8f0;
+        color: #0f172a !important;
+        font-weight: 700;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        display: inline-block;
+    }
+
+    /* Etichete și text cu contrast sporit */
+    .task-label {
+        font-weight: 600;
+        color: #1e293b !important;
+        font-size: 0.95rem;
+    }
+
+    .task-value {
+        color: #0f172a !important;
+        font-size: 1.05rem;
+    }
+
+    /* Câmp de text / textarea lizibil */
+    .task-textarea {
+        background-color: #ffffff;
+        color: #0f172a !important;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        padding: 12px;
+        width: 100%;
+        min-height: 120px;
+        font-size: 1rem;
+        resize: vertical;
+    }
+
+    .task-textarea:focus {
+        border-color: #0d6efd;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+    }
+
+    /* Adaptare Dark Mode */
+    body.dark-mode .task-card {
+        background-color: #1e293b !important;
+        border-color: #334155 !important;
+    }
+
+    body.dark-mode .task-id-badge {
+        background-color: #334155;
+        color: #f8fafc !important;
+    }
+
+    body.dark-mode .task-label {
+        color: #cbd5e1 !important;
+    }
+
+    body.dark-mode .task-value {
+        color: #f8fafc !important;
+    }
+
+    body.dark-mode .task-textarea {
+        background-color: #0f172a !important;
+        color: #f8fafc !important;
+        border-color: #334155 !important;
+    }
+</style>
+
+<div class="row justify-content-center mt-4">
+    <div class="col-md-8">
+        <div class="task-card p-4">
+            
+            <form action="{{ url_for('edit_task_form', task_id=task.id) }}" method="POST">
+                
+                <!-- Antet Task: Titlu & ID -->
+                <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom">
+                    <span class="task-id-badge">
+                        ID: #{{ task.id }}
+                    </span>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" name="completed" id="completed" value="true" {% if task.completed %}checked{% endif %}>
+                        <label class="form-check-label task-label ms-1" for="completed">Mark as Finished</label>
+                    </div>
+                </div>
+
+                <!-- Câmp editare titlu -->
+                <div class="mb-3">
+                    <label for="title" class="task-label d-block mb-1">Todo Title:</label>
+                    <input type="text" id="title" name="title" class="form-control fw-bold fs-5 task-value" value="{{ task.title }}" required>
+                </div>
+
+                <!-- Detalii Task -->
+                <div class="row g-3 mb-4">
+                    <!-- Secțiune Ora Postării (fără Due Date) -->
+                    <div class="col-md-6">
+                        <span class="task-label d-block mb-1">Posted at:</span>
+                        <span class="task-value fw-medium d-block">
+                            {% if task.date_posted %}
+                                <i class="bi bi-clock me-1"></i> {{ task.date_posted.strftime('%Y-%m-%d %H:%M') }}
+                            {% else %}
+                                Not Specified
+                            {% endif %}
+                        </span>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <span class="task-label d-block mb-1">Current Status:</span>
+                        {% if task.completed %}
+                            <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 fs-6 rounded-pill">
+                                <i class="bi bi-check-circle-fill me-1"></i> Finished
+                            </span>
+                        {% else %}
+                            <span class="badge bg-warning-subtle text-warning border border-warning-subtle px-3 py-2 fs-6 rounded-pill">
+                                <i class="bi bi-clock-history me-1"></i> In progress
+                            </span>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Câmp editare Descriere -->
+                <div class="mb-4">
+                    <label for="description" class="task-label d-block mb-1">Description:</label>
+                    <textarea id="description" name="description" class="task-textarea" placeholder="Add a description for this todo...">{{ task.description if task.description else '' }}</textarea>
+                </div>
+
+                <!-- Acțiuni / Butoane -->
+                <div class="d-flex gap-2 justify-content-between pt-3 border-top">
+                    <a href="/" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left"></i> Back to list
+                    </a>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-check-lg"></i> Save Changes
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock content %}
