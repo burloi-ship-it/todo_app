@@ -71,3 +71,21 @@ postatodo/
 ├── Dockerfile               # Docker image build instructions
 ├── docker-compose.yml       # Multi-container orchestration setup
 └── requirements.txt         # Python dependencies
+
+
+<img width="1918" height="1016" alt="login" src="https://github.com/user-attachments/assets/50fef0a0-62e2-4485-b846-8c6761f51f14" />
+
+<img width="1917" height="1017" alt="dashborad" src="https://github.com/user-attachments/assets/4a9944f1-126f-4062-8ef3-361c0b874be5" />
+
+<img width="1918" height="1016" alt="edit_task" src="https://github.com/user-attachments/assets/5ece2715-868f-4935-a255-652664edecb7" />
+
+<img width="1918" height="1011" alt="change_password" src="https://github.com/user-attachments/assets/b3adb663-e7cb-466d-a10f-e7773825c8f8" />
+
+<img width="1918" height="1012" alt="forgot_password" src="https://github.com/user-attachments/assets/3f479246-d071-4719-b453-9b45c2158afa" />
+
+<img width="1918" height="1017" alt="darkmode" src="https://github.com/user-attachments/assets/1a4172c7-354d-45e0-9775-4386dd67b32c" />
+
+
+
+
+
