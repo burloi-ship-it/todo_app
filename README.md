@@ -91,3 +91,5 @@ postatodo/
 
 ### ✏️ Edit Task / Note View
 ![Edit Task](https://github.com/user-attachments/assets/5ece2715-868f-4935-a255-652664edecb7)
+
+⭐ If you found this project useful, consider giving it a star!
